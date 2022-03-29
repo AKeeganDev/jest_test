@@ -1,0 +1,23 @@
+{
+  "name": "jest_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKeeganDev/jest_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AKeeganDev/jest_test/issues"
+  },
+  "homepage": "https://github.com/AKeeganDev/jest_test#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
