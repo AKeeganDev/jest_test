@@ -35,7 +35,7 @@ describe('sum of numbers', () => {
   });
 });
 
-describe('sum of numbers', () => {
+describe('difference of numbers', () => {
 
   it('throws an error if any of the values passed into the function are not a number', () => {
     const startingNum = 4;
@@ -58,5 +58,65 @@ describe('sum of numbers', () => {
     startingNum = 10;
 
     expect(() => { calculator.subtract(startingNum) }).toThrow();
+  });
+});
+
+describe('quotient of numbers', () => {
+
+  it('throws an error if any of the values passed into the function are not a number', () => {
+    const startingNum = 4;
+    const num1 = 2;
+    const num2 = '2';
+
+    expect(() => { calculator.subtract(startingNum, num1, num2) }).toThrow();
+  });
+
+  it('Throws an error if there is not at least 1 value passed for subtracting', () => {
+    const startingNum = 10;
+
+    expect(() => { calculator.divide(startingNum) }).toThrow();
+  });
+
+  it('Divides 2 numbers together', () => {
+    const startingNum = 4;
+    const num1 = 2;
+    const expected = 2;
+
+    expect(calculator.divide(startingNum, num1)).toBe(expected);
+  });
+});
+
+describe('product of numbers', () => {
+
+  it('throws an error if any of the values passed into the function are not a number', () => {
+    const startingNum = 4;
+    const num1 = 2;
+    const num2 = '2';
+
+    expect(() => { calculator.multiply(startingNum, num1, num2) }).toThrow();
+  });
+
+  it('Throws an error if there is not at least 1 value passed for multiplying', () => {
+    const startingNum = 10;
+
+    expect(() => { calculator.multiply(startingNum) }).toThrow();
+  });
+
+  it('Multiplies 2 numbers together', () => {
+    const startingNum = 4;
+    const num1 = 2;
+    const expected = 8;
+
+    expect(calculator.multiply(startingNum, num1)).toBe(expected);
+  });
+
+  it('Multiplies multiple numbers together', () => {
+    const startingNum = 4;
+    const num1 = 2;
+    const num3 = 1;
+    const num2 = 2
+    const expected = 16;
+
+    expect(calculator.multiply(startingNum, num1, num2, num3)).toBe(expected);
   });
 });
